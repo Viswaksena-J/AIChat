@@ -5,10 +5,13 @@ const RootLayout = () => {
   return (
     <div className="rootLayout">
       <header>
-        <Link to="/">
+        <Link to="/" className="logo">
           <img src="/logo.png" alt="" />
           <span>AIChat</span>
         </Link>
+        <div className="user">
+            User
+        </div>
       </header>
       <main>
         <Outlet />
