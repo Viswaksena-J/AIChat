@@ -1,10 +1,40 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import './index.css'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import { createBrowserRouter, Link, RouterProvider } from "react-router-dom";
+import Homepage from "./routes/homepage/Homepage.jsx";
+import Dashboardpage from "./routes/dashboard/Dashboardpage.jsx";
+import Chatpage from "./routes/chatpage/Chatpage.jsx";
+import RootLayout from "./layouts/rootLayout/RootLayout.jsx";
+import DashborardLayout from "./layouts/dashborardLayout/DashborardLayout.jsx";
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+const route = createBrowserRouter([
+  {
+    element: <RootLayout />,
+    children: [
+      {
+        path: "/",
+        element: <Homepage />,
+      },
+      {
+        element: <DashborardLayout />,
+        children: [
+          {
+            path: "/dashboard",
+            element: <Dashboardpage />,
+          },
+          {
+            path: "/dashboard/chat/:id",
+            element: <Chatpage />,
+          },
+        ],
+      },
+    ],
+  },
+]);
+
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-)
+    <RouterProvider router={route} />
+  </React.StrictMode>
+);
