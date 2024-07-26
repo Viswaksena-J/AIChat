@@ -4,7 +4,7 @@ import "./signinpage.css";
 const SignInpage = () => {
   return (
     <div className="signInpage">
-      <SignIn path="/sign-in" />
+      <SignIn path="/sign-in" signUpUrl="/sign-up"/>
     </div>
   );
 };
