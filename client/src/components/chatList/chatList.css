@@ -23,7 +23,7 @@
       flex-direction: column;
       overflow: auto;
 
-      /* Webkit scrollbar styles */
+      /* Webkit scrollbar s tyles */
       &::-webkit-scrollbar {
         width: 8px;
       }
