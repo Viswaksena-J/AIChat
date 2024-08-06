@@ -83,7 +83,7 @@ const NewPrompt = () => {
           <Markdown>{answer}</Markdown>
         </div>
       )}
-      <button onClick={add}>Test me</button>
+      {/* <button onClick={add}>Test me</button> */}
       <div className="endChat" ref={endRef}></div>
       <form className="newForm" onSubmit={handleSubmit}>
         {/* <label htmlFor="file">
