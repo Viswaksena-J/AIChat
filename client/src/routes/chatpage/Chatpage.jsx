@@ -16,8 +16,6 @@ const Chatpage = () => {
         credentials: "include",
       }).then((res) => res.json()),
   });
-
-  console.log(data);
   return (
     <div className="chatpage">
       <div className="wrapper">
@@ -36,7 +34,7 @@ const Chatpage = () => {
                       width="400"
                       transformation={[{ height: 300, width: 400 }]}
                       loading="lazy"
-                      lgip={{active:true,quality:20}}
+                      lgip={{ active: true, quality: 20 }}
                     />
                   )}
                   <div
