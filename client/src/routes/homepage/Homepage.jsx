@@ -4,6 +4,11 @@ import { TypeAnimation } from "react-type-animation";
 import { useState } from "react";
 
 const Homepage = () => {
+  // const test = async () => {
+  //   await fetch("http://localhost:3000/api/test", {
+  //     credentials: "include",
+  //   });
+  // };
   const [typingStatus, setTypingStatus] = useState("human");
 
   return (
@@ -17,6 +22,7 @@ const Homepage = () => {
           illo laboriosam minuss.
         </h3>
         <Link to="/dashboard">Get Started</Link>
+        {/* <button onClick={test}>Test</button> */}
       </div>
       <div className="right">
         <div className="imgContainer">
